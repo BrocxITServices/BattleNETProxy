@@ -1,0 +1,26 @@
+klant
+planning 
+stap 1 functioneel ontwerp (de eisen wat er in moet)
+stap 2 technisch ontwerp (hoe gaan we het doen etc...)
+stap 3 planning werk met tijd en verdeling (1 week max)
+stap 4 programeren en testen per task die afgerond is
+
+
+
+functionele specs:
+1 ophalen van characters info 
+2 filteren op naam
+3 autenticatie flow
+4 class van charachter achievements bank value en level naam van character
+5 ui design hoe het eruit te zien (overleggen met yordi) functioneel 
+6 max request/timeout error handeling
+7 documentatie voor toekomst dev
+8 moduilare generic opzet (SOLID Principles)
+
+technice specs:
+1 http request client die alleen maar get request
+2 url builder route
+3 OAUTH autenticatie 
+4 ophalen token auterization authenticatie ophalen opslaan zulken dingen 
+5 welke end points welke parameter heb je nodig? moet je die opslaan hoe normalizeren we dat?
+6 error handeling
