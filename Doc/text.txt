@@ -24,3 +24,50 @@ technice specs:
 4 ophalen token auterization authenticatie ophalen opslaan zulken dingen 
 5 welke end points welke parameter heb je nodig? moet je die opslaan hoe normalizeren we dat?
 6 error handeling
+
+
+
+
+
+Notitie Yordi
+## Probleem
+Geautomatiseerd account informatie uit te lezen. (HTTPGET)
+
+
+## Functionele eisen
+- Ophalen van karakter gegevens en bijbehorende gegevens
++ Level
++ Class
++ Achievements
++ Bank value  
++ Name
++ Id
+
+- Instaat kunnen zijn om daarna in front end kunnen filteren op 'Naam'.
+- Authenticatie flow toepassen
+- User feedback "Bij error een bericht tonen aan user" bijv Verzoek mag maximaal .. duren met ophalen en anders error message tonen aan user.
+- Documentatie bijhouden 
+- Modulaire & Generic opzet (Seperation of concern)
+- Error handling
+
+
+
+## Technische eisen
+
+- Authentication
++ Ophalen token
++ Authenticatie en Authorisatie
+
+- Endpoint X 
++ Gegevens ophalen van alle karakters of 1 specifieke karakter
+
+- Welke endpoints moeten we aanroepen met welke gegevens.
+- Timeout handling als battle.net api offline is of het duurt te lang met verzoek.
+- Http client met alleen GET requests.
+- Route 
+- Url builder in staat om bepaalde endpoints te benaderen
+- OAUTH
+
+
+
+
