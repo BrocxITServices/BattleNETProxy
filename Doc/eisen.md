@@ -1,8 +1,7 @@
 # Functionele eisen
-- Ophalen van characters infomatie(Level, Class, Achievements, Bank value, Name Id )
+- Ophalen van characters infomatie(Level, Class, Achievements, Bank value, Name)
 - Filteren op naam
 - Autenticatie flow
-- Class van charachter achievements bank value en level naam van character
 - UI design hoe het eruit te zien (overleggen met yordi) functioneel 
 - Error handeling and feedback User friendly(try again later etc...) 
 - Documentatie bijhouden voor gebruik(dingen waar bij moet worden opgelet en special cases)
