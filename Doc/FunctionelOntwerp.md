@@ -29,7 +29,7 @@ Het doel van dit project is het realiseren van een mudblazor website waar je zon
  De gebruiker van ons platform kan doormiddel van een placeholder zijn karakter naam invullen en opsturen, zodra dit binnenkomt op onze API koppeling worden de statistieken van de gebruiker opgehaald, dit betreft het volgende: Name, Id, Level, Class, Achievements, Bank value. Dit wordt vervolgens getoond op de website en kan de gebruiker zijn statistieken inzien.
 
  #### 3.2 Authentication flow
- Door een authentication flow te implementeren zorgen we ervoor dat de clien secret voor de authorization server geheim gehouden word en er geen persoonlijke data wordt weergeven aan de end user.
+ Door het implementeren van OAuth en het handhaven van best-practices zorgen we ervoor dat de client secret voor de authorization server geheim gehouden word en er geen persoonlijke data wordt weergeven aan de end user. 
 
  #### 3.3 Filteren op naam
  De gebruiker heeft de mogelijkheid om zijn opgehaalde gegevens te sorteren op naam, hierdoor kan de gebruiker zijn statistieken inzien per karakter.
