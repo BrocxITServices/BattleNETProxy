@@ -32,7 +32,7 @@ Het doel van dit project is het realiseren van een mudblazor website waar je zon
  Door het implementeren van OAuth en het handhaven van best-practices zorgen we ervoor dat de client secret voor de authorization server geheim gehouden word en er geen persoonlijke data wordt weergeven aan de end user. 
 
  #### 3.3 Filteren op naam
- De gebruiker heeft de mogelijkheid om zijn opgehaalde gegevens te sorteren op naam, hierdoor kan de gebruiker zijn statistieken inzien per karakter.
+ De gebruiker heeft de mogelijkheid om zijn karakter gegevens te sorteren op naam, hierdoor kan de gebruiker zijn statistieken inzien per karakter.
 
  #### 3.4 User interface
  Moet nog besproken worden.
