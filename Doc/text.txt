@@ -66,15 +66,16 @@ Geautomatiseerd account informatie uit te lezen. (HTTPGET)
 - Http client met alleen GET requests.
 - Route 
 - Url builder in staat om bepaalde endpoints te benaderen
-- OAUTH
+- OAUTH|
 
-| **Nummer** |   **Omschrijving specificatie**  |                             **Opmerkingen**                            | ** MoSCoW** |
-|:----------:|:--------------------------------:|:----------------------------------------------------------------------:|:-----------:|
-|      1     | Ophalen van karakter gegevens    |                                                                        | Must have   |
-|      2     | Toepassen van authenticatie flow |                                                                        | Must have   |
-|      3     | Toepassen van user feedback      | Bericht tonen aan gebruiker als het ophalen van gegevens te lang duurt | Must have   |
-|      4     | Error handling                   | Als er geen user is gevonden op basis van gegeven informatie.          | Must have   |
-|      5     | Modulaire en generieke opzet     | SOC (Seperation of concern)                                            | Should have |
-|      6     | Filteren van karakter gegevens   | Het tonen van data op als voorbeeld 'Naam' filter.                     | Should Have |
+
+| **Nummer** |   **Omschrijving specificatie**  |                            **Opmerkingen**                            | **MoSCoW** |
+|:----------:|:--------------------------------:|:---------------------------------------------------------------------:|:----------:|
+|      1     | Ophalen van karakter gegevens    | Ophalen van bepaalde informatie van karakter zie documentatie         |      M     |
+|      2     | Toepassen van authenticatie flow |                                                                       |      M     |
+|      3     | Toepassen van error handling     | Gebruiksvriendelijk afhandelen van errors bijv: time-out, max-request |      M     |
+|      4     | User-interface ontwerp           | Moet nog besproken worden                                             |      M     |
+|      5     | Modulaire en generieke opzet     | Implementeren van SOLID principles                                    |      S     |
+|      6     | Filteren van karakter gegevens   | Het tonen van data op als voorbeeld 'Naam' filter.                    |      S     |
 
 
