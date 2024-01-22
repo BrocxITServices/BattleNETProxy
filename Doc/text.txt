@@ -68,6 +68,13 @@ Geautomatiseerd account informatie uit te lezen. (HTTPGET)
 - Url builder in staat om bepaalde endpoints te benaderen
 - OAUTH
 
-
+| **Nummer** |   **Omschrijving specificatie**  |                             **Opmerkingen**                            | ** MoSCoW** |
+|:----------:|:--------------------------------:|:----------------------------------------------------------------------:|:-----------:|
+|      1     | Ophalen van karakter gegevens    |                                                                        | Must have   |
+|      2     | Toepassen van authenticatie flow |                                                                        | Must have   |
+|      3     | Toepassen van user feedback      | Bericht tonen aan gebruiker als het ophalen van gegevens te lang duurt | Must have   |
+|      4     | Error handling                   | Als er geen user is gevonden op basis van gegeven informatie.          | Must have   |
+|      5     | Modulaire en generieke opzet     | SOC (Seperation of concern)                                            | Should have |
+|      6     | Filteren van karakter gegevens   | Het tonen van data op als voorbeeld 'Naam' filter.                     | Should Have |
 
 
