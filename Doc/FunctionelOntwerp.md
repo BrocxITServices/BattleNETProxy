@@ -1,4 +1,4 @@
- **Table of content:**
+ **Inhoudsopgave:**
 
  1 [Inleiding](#item-one)
 
