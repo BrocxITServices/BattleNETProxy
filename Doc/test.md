@@ -8,7 +8,7 @@
 - documentatie voor toekomst dev
 - moduilare generic opzet (SOLID Principles)
 
-dit is een (voorbeeld url)[https://google.nl]
+dit is een [voorbeeld url(https://google.nl)
 
 technice specs:
 1 http request client die alleen maar get request
