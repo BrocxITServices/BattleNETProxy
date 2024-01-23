@@ -31,8 +31,28 @@ De applicatie zal OAuth 2.0 gebruiken voor authenticatie. Dit houdt in dat de ap
 Het ophalen van het token gebeurt tijdens de OAuth-authenticatieflow. Het token wordt opgeslagen en wordt gebruikt voor alle volgende API-aanvragen. Het token wordt vernieuwd als het verloopt.
 
 ### Endpoints en Parameters
-
 De applicatie zal verschillende endpoints van de Blizzard API gebruiken, afhankelijk van de benodigde gegevens. De benodigde parameters voor elk endpoint worden dynamisch toegevoegd door de URL Builder. De gegevens van de API-respons worden genormaliseerd en opgeslagen in een gestructureerd formaat voor verdere verwerking.
+\`\`\`http
+GET /api/items
+\`\`\`
+
+| Parameter | Type     | Required | Description                |
+| :-------- | :------- | :------  | :------------------------- |
+| `region`  | `string` |    :heavy_check_mark:   | Your region  |
+| `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
+| `locale`  | `string` |          | The locale to reflect in localized data.  |
+
+#### Get item
+
+\`\`\`http
+GET /api/items/${id}
+\`\`\`
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
+
+
 
 ### Error handeling
 
