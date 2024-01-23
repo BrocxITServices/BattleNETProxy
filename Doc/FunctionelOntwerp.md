@@ -28,7 +28,7 @@ Het doel van dit project is het realiseren van een mudblazor website waar je zon
  <a id="item-three"></a>
  ### Functionele specificaties
  #### 3.1 Ophalen van karakter gegevens
- De gebruiker van ons platform kan doormiddel van een placeholder zijn karakter naam invullen en opsturen, zodra dit binnenkomt op onze API koppeling worden de statistieken van de gebruiker opgehaald, dit betreft het volgende: Name, Id, Level, Class, Achievements, Bank value. Dit wordt vervolgens getoond op de website en kan de gebruiker zijn statistieken inzien.
+ De gebruiker van ons platform kan doormiddel van een placeholder zijn karakter naam invullen en opsturen, zodra dit binnenkomt op onze API koppeling worden de statistieken van de gebruiker opgehaald, dit betreft het volgende: `Name`, Id, Level, Class, Achievements, Bank value. Dit wordt vervolgens getoond op de website en kan de gebruiker zijn statistieken inzien.
 
  #### 3.2 Authentication flow
  Door het implementeren van OAuth en het handhaven van best-practices zorgen we ervoor dat de client secret voor de authorization server geheim gehouden word en er geen persoonlijke data wordt weergeven aan de end user. 
