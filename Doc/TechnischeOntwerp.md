@@ -33,7 +33,7 @@ Het ophalen van het token gebeurt tijdens de OAuth-authenticatieflow. Het token 
 ### Endpoints en Parameters
 De applicatie zal verschillende endpoints van de Blizzard API gebruiken, afhankelijk van de benodigde gegevens. De benodigde parameters voor elk endpoint worden dynamisch toegevoegd door de URL Builder. De gegevens van de API-respons worden genormaliseerd en opgeslagen in een gestructureerd formaat voor verdere verwerking.
 ```http
-  GET /profile/user/wow 
+GET /profile/user/wow 
 ```
 
 | Parameter | Type     | Required | Description                |
