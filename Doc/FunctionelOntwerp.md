@@ -6,6 +6,8 @@
 
  3 [Functionele specificaties](#item-three)
 
+ 4 [MoSCoW Analyse](#item-four)
+
 
 
  
@@ -42,3 +44,14 @@ Het doel van dit project is het realiseren van een mudblazor website waar je zon
 
 #### 3.6 Modulair en Generieke opzet
  Het vroegtijdig ontwikkelen van modulaire functionaliteit maakt het mogelijk om deze in de toekomst te hergebruiken, bijvoorbeeld bij een migratie van de website naar Azure.
+
+ <a id="item-four"></a>
+#### 4 MoSCoW Analyse
+| **Nummer** |   **Omschrijving specificatie**  |                            **Opmerkingen**                            | **MoSCoW** |
+|:----------:|:--------------------------------:|:---------------------------------------------------------------------:|:----------:|
+|      1     | Ophalen van karakter gegevens    | Ophalen van bepaalde informatie van karakter zie documentatie         |      M     |
+|      2     | Toepassen van authenticatie flow |                                                                       |      M     |
+|      3     | Toepassen van error handling     | Gebruiksvriendelijk afhandelen van errors bijv: time-out, max-request |      M     |
+|      4     | User-interface ontwerp           | Moet nog besproken worden                                             |      M     |
+|      5     | Modulaire en generieke opzet     | Implementeren van SOLID principles                                    |      S     |
+|      6     | Filteren van karakter gegevens   | Het tonen van data op als voorbeeld 'Naam' filter.                    |      S     |
