@@ -34,7 +34,7 @@ Het ophalen van het token gebeurt tijdens de OAuth-authenticatieflow. Het token 
 ### Endpoints en Parameters
 De applicatie zal verschillende endpoints van de Blizzard API gebruiken, afhankelijk van de benodigde gegevens. De benodigde parameters voor elk endpoint worden dynamisch toegevoegd door de URL Builder. De gegevens van de API-respons worden genormaliseerd en opgeslagen in een gestructureerd formaat voor verdere verwerking.
 
-#### Get user
+#### Get User
 ```http
 GET /profile/user/wow 
 ```
@@ -45,7 +45,7 @@ GET /profile/user/wow
 | `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
 
-#### Get item
+#### Get Achievements
 
 ```http
 GET /profile/wow/character/{realmSlug}/{characterName}/achievements 
@@ -59,7 +59,7 @@ GET /profile/wow/character/{realmSlug}/{characterName}/achievements
 | `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
 
-#### Get encounters
+#### Get Encounters
 ```http
 GET /profile/wow/character/{realmSlug}/{characterName}/encounters 
 ```
