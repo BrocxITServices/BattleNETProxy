@@ -72,6 +72,9 @@ GET /profile/wow/character/{realmSlug}/{characterName}/encounters
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
 
 #### Get Equipment
+```http
+/profile/wow/character/{realmSlug}/{characterName}/equipment 
+```
 | Parameter | Type     | Required | Description                |
 | :-------- | :------- | :------  | :------------------------- |
 | `region`  | `string` |    :heavy_check_mark:   | Your region  |
