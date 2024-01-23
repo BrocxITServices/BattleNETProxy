@@ -27,7 +27,7 @@ De applicatie zal OAuth 2.0 gebruiken voor authenticatie. Dit houdt in dat de ap
 Voor informatie over Oauth graag kijken naar https://develop.battle.net/documentation/guides/using-oauth
 De Authorize URI https://oauth.battle.net/authorize
 De Token URI https://oauth.battle.net/token
-Voor nu heb je de Oauth credentials nodig voor de volgende Get request:
+Voor nu heb je de OAuth credentials nodig voor de volgende Get request:
 
     GET /oauth/userinfo
     GET /profile/user/wow
@@ -43,6 +43,7 @@ Het ophalen van het token gebeurt tijdens de OAuth-authenticatieflow. Het token 
 <a id="item-five"></a>
 ### Endpoints en Parameters
 De applicatie zal verschillende endpoints van de Blizzard API gebruiken, afhankelijk van de benodigde gegevens. De benodigde parameters voor elk endpoint worden dynamisch toegevoegd door de URL Builder. De gegevens van de API-respons worden genormaliseerd en opgeslagen in een gestructureerd formaat voor verdere verwerking.
+
 
 #### Get User
 ```http
