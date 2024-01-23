@@ -70,6 +70,16 @@ GET /profile/wow/character/{realmSlug}/{characterName}/encounters
 | `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
 
+#### Get Equipment
+| Parameter | Type     | Required | Description                |
+| :-------- | :------- | :------  | :------------------------- |
+| `region`  | `string` |    :heavy_check_mark:   | Your region  |
+| `realmSlug`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
+| `characterName`  | `string` |   :heavy_check_mark:       | The locale to reflect in localized data.  |
+| `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
+| `locale`  | `string` |          | The locale to reflect in localized data.  |
+
+
 ### Error handeling
 
 De applicatie zal error's afhandelen die kunnen optreden tijdens het proces, zoals netwerkfouten, API-fouten, enz. Deze fouten worden gelogd voor debugging en de gebruiker wordt op de hoogte gebracht van het probleem op een manier die hun begrijpen. 
