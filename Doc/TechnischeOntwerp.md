@@ -6,13 +6,13 @@ Dit document beschrijft het technische ontwerp voor een Blazor C# API-koppeling 
 
 ## Inhoudsopgave
 
-1. HTTP Request Client
-2. URL Builder
-3. OAuth Authenticatie
-4. Token Ophalen
-5. Endpoints en Parameters
-6. Foutafhandeling
-7. Route
+1. HTTP Request Client(#item-one)
+2. URL Builder(#item-two)
+3. OAuth Authenticatie(#item-three)
+4. Token Ophalen(#item-four)
+5. Endpoints en Parameters(#item-five)
+6. Foutafhandeling(#item-six)
+7. Route(#item-seven)
 
 ### HTTP Request Client
 
