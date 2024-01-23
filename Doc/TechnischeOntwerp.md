@@ -73,7 +73,7 @@ GET /profile/wow/character/{realmSlug}/{characterName}/encounters
 
 #### Get Equipment
 ```http
-/profile/wow/character/{realmSlug}/{characterName}/equipment 
+GET /profile/wow/character/{realmSlug}/{characterName}/equipment 
 ```
 | Parameter | Type     | Required | Description                |
 | :-------- | :------- | :------  | :------------------------- |
