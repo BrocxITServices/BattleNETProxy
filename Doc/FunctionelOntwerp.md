@@ -39,7 +39,7 @@ Het doel van dit project is het ontwikkelen van een modulair en generieke api-ko
  Moet nog besproken worden.
 
 #### 3.5 Error handling & user feedback
- Door op een gebruikersvriendelijke manier error handling toe te passen, ontvangt de eindgebruiker de juiste feedback bij problemen, zoals bijvoorbeeld een time-out. Als het ophalen van gegevens te lang duurt of als de API offline is, wordt de gebruiker voorzien van een melding zoals 'Probeer het later opnieuw'.
+ Als de API niet meer reageert of zich anders gedraagt moeten we dit correct afhandelen, dit doen we door de gebruiker de juiste feedback te geven door bijvoorbeeld een bericht te tonen zoals 'Probeer het later opnieuw'
 
 #### 3.6 SOLID Principles
  Door de SOLID principles te handhaven tijdens de ontwikkeling van de API-koppeling zorgen we ervoor dat de code geen afhankelijkheden heeft makkelijk te lezen is en het aanpassen en testen van de code eenvoudiger wordt. Ook is dit belangrijk voor door ontwikkeling aan de api-koppeling.
