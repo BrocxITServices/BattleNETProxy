@@ -33,7 +33,7 @@ Het ophalen van het token gebeurt tijdens de OAuth-authenticatieflow. Het token 
 ### Endpoints en Parameters
 De applicatie zal verschillende endpoints van de Blizzard API gebruiken, afhankelijk van de benodigde gegevens. De benodigde parameters voor elk endpoint worden dynamisch toegevoegd door de URL Builder. De gegevens van de API-respons worden genormaliseerd en opgeslagen in een gestructureerd formaat voor verdere verwerking.
 ```http
-  GET /api/items
+  GET /profile/user/wow 
 ```
 
 | Parameter | Type     | Required | Description                |
@@ -44,15 +44,28 @@ De applicatie zal verschillende endpoints van de Blizzard API gebruiken, afhanke
 
 #### Get item
 
-\`\`\`http
-GET /api/items/${id}
-\`\`\`
+```http
+GET /profile/wow/character/{realmSlug}/{characterName}/achievements 
+```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
+| Parameter | Type     | Required | Description                |
+| :-------- | :------- | :------  | :------------------------- |
+| `region`  | `string` |    :heavy_check_mark:   | Your region  |
+| `realmSlug`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
+| `characterName`  | `string` |   :heavy_check_mark:       | The locale to reflect in localized data.  |
+| `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
+| `locale`  | `string` |          | The locale to reflect in localized data.  |
 
-
+```http
+GET /profile/wow/character/{realmSlug}/{characterName}/encounters 
+```
+| Parameter | Type     | Required | Description                |
+| :-------- | :------- | :------  | :------------------------- |
+| `region`  | `string` |    :heavy_check_mark:   | Your region  |
+| `realmSlug`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
+| `characterName`  | `string` |   :heavy_check_mark:       | The locale to reflect in localized data.  |
+| `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
+| `locale`  | `string` |          | The locale to reflect in localized data.  |
 
 ### Error handeling
 
