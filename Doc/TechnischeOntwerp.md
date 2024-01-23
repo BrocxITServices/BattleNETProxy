@@ -12,7 +12,6 @@ Dit document beschrijft het technische ontwerp voor een Blazor C# API-koppeling 
 4. [Token Ophalen](#item-four)
 5. [Endpoints en Parameters](#item-five)
 6. [Foutafhandeling](#item-six)
-7. [Route](#item-seven)
 8. [Conclusie](#item-eight)
 <a id="item-one"></a>
 ### HTTP Request Client
@@ -20,12 +19,14 @@ Dit document beschrijft het technische ontwerp voor een Blazor C# API-koppeling 
 De applicatie zal gebruik maken van een HTTP-client, zoals HttpClient in .NET, die GET-verzoeken verstuurt naar de Blizzard API. De client zal headers instellen voor authenticatie en andere benodigde informatie. De antwoorden van de API worden vervolgens verwerkt en de relevante gegevens worden geëxtraheerd.
 <a id="item-two"></a>
 ### URL Builder
-
 De URL Builder zal een basis-URL hebben voor de Blizzard API. Afhankelijk van de specifieke API-aanroep die nodig is, zal de builder de juiste endpoints en parameters toevoegen aan de basis-URL. Dit zorgt voor flexibiliteit en herbruikbaarheid van code.
 <a id="item-three"></a>
 ### OAuth Authenticatie
-
 De applicatie zal OAuth 2.0 gebruiken voor authenticatie. Dit houdt in dat de applicatie een toegangstoken van de Blizzard API zal aanvragen met behulp van de client-ID en het client-geheim. Dit token wordt vervolgens gebruikt om geautoriseerde aanvragen te doen aan de API.
+
+Voor informatie over Oauth graag kijken naar https://develop.battle.net/documentation/guides/using-oauth
+De Authorize URI 'https://oauth.battle.net/authorize'
+De Token URI 'https://oauth.battle.net/token'
 <a id="item-four"></a>
 ### Token Ophalen
 
@@ -88,10 +89,6 @@ GET /profile/wow/character/{realmSlug}/{characterName}/equipment
 
 De applicatie zal error's afhandelen die kunnen optreden tijdens het proces, zoals netwerkfouten, API-fouten, enz. Deze fouten worden gelogd voor debugging en de gebruiker wordt op de hoogte gebracht van het probleem op een manier die hun begrijpen. 
 <a id="item-seven"></a>
-### Route
-
-De applicatie zal een routeringsmechanisme hebben om verschillende views of componenten te tonen op basis van de URL. Dit zorgt voor een naadloze navigatie-ervaring voor de gebruiker.
-<a id="item-eight"></a>
 ## Conclusie
 
 Dit technisch ontwerp document biedt een gedetailleerd overzicht van de technische aspecten van de applicatie. Het volgende stadium van dit project zou de implementatie van deze ontwerpen zijn. Bij vragen of opmerkingen kunt u contact opnemen met de auteur van dit document.
