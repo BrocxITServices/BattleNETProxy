@@ -25,8 +25,8 @@ De URL Builder zal een basis-URL hebben voor de Blizzard API. Afhankelijk van de
 De applicatie zal OAuth 2.0 gebruiken voor authenticatie. Dit houdt in dat de applicatie een toegangstoken van de Blizzard API zal aanvragen met behulp van de client-ID en het client-geheim. Dit token wordt vervolgens gebruikt om geautoriseerde aanvragen te doen aan de API.
 
 Voor informatie over Oauth graag kijken naar https://develop.battle.net/documentation/guides/using-oauth
-De Authorize URI 'https://oauth.battle.net/authorize'
-De Token URI 'https://oauth.battle.net/token'
+De Authorize URI https://oauth.battle.net/authorize
+De Token URI https://oauth.battle.net/token
 Voor nu heb je de Oauth credentials nodig voor de volgende Get request:
 
     GET /oauth/userinfo
