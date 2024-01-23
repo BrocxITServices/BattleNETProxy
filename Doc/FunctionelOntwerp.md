@@ -21,20 +21,19 @@ Dit document beschrijft de functionele vereisten voor de ontwikkeling van een AP
  
  <a id="item-two"></a>
  ### Doelstellingen
-Het doel van dit project is het realiseren van een mudblazor website waar je zonder in te loggen met je account gegevens jouw huidige statistieken kan ophalen en bekijken.
+Het doel van dit project is het ontwikkelen van een modulair en generieke api-koppeling met de battle.net API. Dit maakt het mogelijk om in de toekomst de api-koppeling te hergebruiken, bijvoorbeeld bij een migratie naar Azure. En zou je ook de api-koppeling kunne gebruiken voor andere doeleinden.
 
  
-
  <a id="item-three"></a>
  ### Functionele specificaties
  #### 3.1 Ophalen van karakter gegevens
- De gebruiker van ons platform kan doormiddel van een placeholder zijn karakter naam invullen en opsturen, zodra dit binnenkomt op onze API koppeling worden de statistieken van de gebruiker opgehaald, dit betreft het volgende: `Name`, Id, Level, Class, Achievements, Bank value. Dit wordt vervolgens getoond op de website en kan de gebruiker zijn statistieken inzien.
+ De gebruiker van ons platform kan doormiddel van een placeholder zijn karakter naam invullen en opsturen, zodra dit binnenkomt op onze API koppeling worden de statistieken van de gebruiker opgehaald, dit betreft het volgende: `Name`, `Id`, `Level`, `Class`, `Achievements`, `Bank value`. Dit wordt vervolgens getoond op de website en kan de gebruiker zijn statistieken inzien.
 
  #### 3.2 Authentication flow
  Door het implementeren van OAuth en het handhaven van best-practices zorgen we ervoor dat de client secret voor de authorization server geheim gehouden word en er geen persoonlijke data wordt weergeven aan de end user. 
 
  #### 3.3 Filteren op naam
- De gebruiker heeft de mogelijkheid om zijn karakter gegevens te sorteren op naam, hierdoor kan de gebruiker zijn statistieken inzien per karakter.
+ De gebruiker heeft de mogelijk om zijn karakters te sorteren op naam, hierdoor kan je de statistieken per karakter inzien zoals de opgehaalde karakter gegevens bij 3.1.
 
  #### 3.4 User interface
  Moet nog besproken worden.
@@ -42,8 +41,16 @@ Het doel van dit project is het realiseren van een mudblazor website waar je zon
 #### 3.5 Error handling & user feedback
  Door op een gebruikersvriendelijke manier error handling toe te passen, ontvangt de eindgebruiker de juiste feedback bij problemen, zoals bijvoorbeeld een time-out. Als het ophalen van gegevens te lang duurt of als de API offline is, wordt de gebruiker voorzien van een melding zoals 'Probeer het later opnieuw'.
 
-#### 3.6 Modulair en Generieke opzet
- Het vroegtijdig ontwikkelen van modulaire functionaliteit maakt het mogelijk om deze in de toekomst te hergebruiken, bijvoorbeeld bij een migratie van de website naar Azure.
+#### 3.6 SOLID Principles
+ Door de SOLID principles te handhaven tijdens de ontwikkeling van de API-koppeling zorgen we ervoor dat de code geen afhankelijkheden heeft makkelijk te lezen is en het aanpassen en testen van de code eenvoudiger wordt. Ook is dit belangrijk voor door ontwikkeling aan de api-koppeling.
+ 
+De key componenten van de SOLID Principles:
+- **S**ingle Responsibility Principle.
+- **O**pen-closed principle.
+- **L**iskov substitution principle.
+- **I**nterface segregation principle.
+- **D**ependency inversion principle. 
+
 
  <a id="item-four"></a>
 #### 4 MoSCoW Analyse
@@ -52,6 +59,6 @@ Het doel van dit project is het realiseren van een mudblazor website waar je zon
 |      1     | Ophalen van karakter gegevens    | Ophalen van bepaalde informatie van karakter zie documentatie         |      M     |
 |      2     | Toepassen van authenticatie flow |                                                                       |      M     |
 |      3     | Toepassen van error handling     | Gebruiksvriendelijk afhandelen van errors bijv: time-out, max-request |      M     |
-|      4     | User-interface ontwerp           | Moet nog besproken worden                                             |      M     |
-|      5     | Modulaire en generieke opzet     | Implementeren van SOLID principles                                    |      S     |
-|      6     | Filteren van karakter gegevens   | Het tonen van data op als voorbeeld 'Naam' filter.                    |      S     |
+|      4     | Modulaire en generieke opzet     | Implementeren van SOLID principles                                    |      S     |
+|      5     | Filteren van karakter gegevens   | Het tonen van data op als voorbeeld 'Naam' filter.                    |      S     |
+|      6     | User-interface ontwerp           | Moet nog besproken worden                                             |      S     |
