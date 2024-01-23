@@ -27,6 +27,15 @@ De applicatie zal OAuth 2.0 gebruiken voor authenticatie. Dit houdt in dat de ap
 Voor informatie over Oauth graag kijken naar https://develop.battle.net/documentation/guides/using-oauth
 De Authorize URI 'https://oauth.battle.net/authorize'
 De Token URI 'https://oauth.battle.net/token'
+Voor nu heb je de Oauth credentials nodig voor de volgende Get request:
+
+    GET /oauth/userinfo
+    GET /profile/user/wow
+    GET /profile/user/wow/protected-character/{realm-id}-{character-id}
+    GET /profile/user/wow/collections
+    GET /profile/user/wow/collections/pets
+    GET /profile/user/wow/collections/mounts
+
 <a id="item-four"></a>
 ### Token Ophalen
 
