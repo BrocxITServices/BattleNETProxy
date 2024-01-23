@@ -6,14 +6,14 @@ Dit document beschrijft het technische ontwerp voor een Blazor C# API-koppeling 
 
 ## Inhoudsopgave
 
-1. HTTP Request Client(#item-one)
-2. URL Builder(#item-two)
-3. OAuth Authenticatie(#item-three)
-4. Token Ophalen(#item-four)
-5. Endpoints en Parameters(#item-five)
-6. Foutafhandeling(#item-six)
-7. Route(#item-seven)
-
+1. [HTTP Request Client](#item-one)
+2. [URL Builder](#item-two)
+3. [OAuth Authenticatie](#item-three)
+4. [Token Ophalen](#item-four)
+5. [Endpoints en Parameters](#item-five)
+6. [Foutafhandeling](#item-six)
+7. [Route](#item-seven)
+<a id="item-one"/>
 ### HTTP Request Client
 
 De applicatie zal gebruik maken van een HTTP-client, zoals HttpClient in .NET, die GET-verzoeken verstuurt naar de Blizzard API. De client zal headers instellen voor authenticatie en andere benodigde informatie. De antwoorden van de API worden vervolgens verwerkt en de relevante gegevens worden geëxtraheerd.
