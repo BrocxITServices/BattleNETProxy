@@ -12,8 +12,7 @@ Dit document beschrijft het technische ontwerp voor een Blazor C# API-koppeling 
 4. [Token Ophalen](#item-four)
 5. [Endpoints en Parameters](#item-five)
 6. [Data normalization](#item-six)
-7. [Foutafhandeling](#item-seven)
-8. [Conclusie](#item-eight)
+7. [Conclusie](#item-seven)
 <a id="item-one"></a>
 ### HTTP Request Client
 
@@ -114,11 +113,8 @@ Het proces van data normalisatie in deze API-koppeling zal bestaan uit de volgen
 ### Verwachte Resultaten
 
 Door data normalisatie toe te passen, verwachten we een verbetering van de gegevenskwaliteit, een vermindering van de redundantie en een verhoogde efficiëntie van onze API-koppeling met de Blizzard API.
-<a id="item-seven"></a>
-### Error handeling
 
-De applicatie zal error's afhandelen die kunnen optreden tijdens het proces, zoals netwerkfouten, API-fouten, enz. Deze fouten worden gelogd voor debugging en de gebruiker wordt op de hoogte gebracht van het probleem op een manier die hun begrijpen. 
-<a id="item-eigth"></a>
+<a id="item-seven"></a>
 ## Conclusie
 
 Dit technisch ontwerp document biedt een gedetailleerd overzicht van de technische aspecten van de applicatie. Het volgende stadium van dit project zou de implementatie van deze ontwerpen zijn. Bij vragen of opmerkingen kunt u contact opnemen met de auteur van dit document.
