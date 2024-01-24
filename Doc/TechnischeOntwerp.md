@@ -39,7 +39,7 @@ Voor nu heb je de OAuth credentials nodig voor de volgende Get request:
 <a id="item-four"></a>
 ### Token Ophalen
 
-Het ophalen van het token gebeurt tijdens de OAuth-authenticatieflow. Het token wordt opgeslagen en wordt gebruikt voor alle volgende API-aanvragen. Het token wordt vernieuwd als het verloopt.
+Het ophalen van het token gebeurt tijdens de OAuth-authenticatieflow. Het token wordt opgeslagen en wordt gebruikt voor alle volgende API-aanvragen. Het token verloopt na 24 uur zorg ervoor dat er gechecked wordt of het valid is en dan opnieuw aanvragen mocht dat het geval zijn.
 <a id="item-five"></a>
 ### Endpoints en Parameters
 De applicatie zal verschillende endpoints van de Blizzard API gebruiken, afhankelijk van de benodigde gegevens. De benodigde parameters voor elk endpoint worden dynamisch toegevoegd door de URL Builder. De gegevens van de API-respons worden genormaliseerd en opgeslagen in een gestructureerd formaat voor verdere verwerking.
