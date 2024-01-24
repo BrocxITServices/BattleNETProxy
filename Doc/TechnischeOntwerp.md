@@ -95,49 +95,25 @@ GET /profile/wow/character/{realmSlug}/{characterName}/equipment
 | `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
 <a id="item-six"></a>
-# Datanormalisatie
+## Data Normalization
 
-Datanormalisatie is een essentieel proces in ons applicatieontwerp dat helpt om de efficiëntie van onze datastructuur te verbeteren en redundantie te verminderen. Dit proces omvat het organiseren van gegevens in objecten of entiteiten om duplicatie te minimaliseren.
+### Doel
 
-## Datastructuur
+Het doel van data normalisatie in deze API-koppeling is om ervoor te zorgen dat de gegevens die worden uitgewisseld tussen onze applicatie en de Blizzard API consistent en betrouwbaar zijn.
 
-We hebben twee hoofdentiteiten in onze applicatie: `Player` en `Game`.
+### Proces
 
-### Player Entiteit
+Het proces van data normalisatie in deze API-koppeling zal bestaan uit de volgende stappen:
 
-De `Player` entiteit slaat informatie op over elke speler. Hier is een voorbeeld van hoe deze entiteit eruit zou kunnen zien:
+1. **Identificatie van Data Anomalieën**: We zullen een reeks geautomatiseerde tests implementeren die regelmatig worden uitgevoerd om inconsistenties of fouten in de gegevens te identificeren. Deze tests zullen worden geschreven in C# en zullen gebruik maken van de ingebouwde testmogelijkheden van het .NET framework.
 
-```csharp
-public class Player
-{
-    public Guid PlayerId { get; set; }
-    public string Name { get; set; }
-    public Guid GameId { get; set; }
-    public string Class { get; set; }
-    public int Level { get; set; }
-    public string Faction { get; set; }
-}
-```
-### Game Entiteit
+2. **Adressering van Data Anomalieën**: Zodra anomalieën zijn geïdentificeerd, zullen we strategieën implementeren om deze aan te pakken en te corrigeren. Dit kan het opschonen van de gegevens omvatten, het aanpassen van de manier waarop we gegevens van de Blizzard API ophalen, of het aanpassen van de manier waarop we gegevens in onze eigen systemen opslaan.
 
-De `Game` entiteit slaat informatie op over elk spel. Hier is een voorbeeld van hoe deze entiteit eruit zou kunnen zien:
+3. **Implementatie van Normalisatie**: We zullen normalisatie technieken toepassen om redundantie te verminderen en gegevens te standaardiseren. Dit zal worden bereikt door het implementeren van een reeks normalisatie regels in onze API-koppeling code. Deze regels zullen worden toegepast wanneer gegevens worden ontvangen van de Blizzard API, voordat ze worden opgeslagen in onze eigen systemen.
 
-```csharp
-public class Game
-{
-    public Guid GameId { get; set; }
-    public string Name { get; set; }
-}
-```
-## Normalisatieproces
+### Verwachte Resultaten
 
-We hebben de principes van datanormalisatie toegepast op deze entiteiten om de gegevensintegriteit te waarborgen en de prestaties te optimaliseren. Specifiek hebben we:
-
-1. Ervoor gezorgd dat elke eigenschap in een entiteit een unieke waarde heeft en dat elke waarde atomair is (1NF).
-2. Gegevens gescheiden in verschillende entiteiten op basis van de relaties tussen de eigenschappen (2NF).
-3. Eigenschappen verwijderd die niet afhankelijk zijn van de primaire sleutel (3NF).
-
-Door deze principes van datanormalisatie toe te passen, kunnen we een efficiënte, flexibele en betrouwbare datastructuur creëren. Dit zal ons helpen om de prestaties van onze Blazor C# API-integratie met de Blizzard API te optimaliseren.
+Door data normalisatie toe te passen, verwachten we een verbetering van de gegevenskwaliteit, een vermindering van de redundantie en een verhoogde efficiëntie van onze API-koppeling met de Blizzard API.
 <a id="item-seven"></a>
 ### Error handeling
 
