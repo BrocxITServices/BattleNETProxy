@@ -11,8 +11,9 @@ Dit document beschrijft het technische ontwerp voor een Blazor C# API-koppeling 
 3. [OAuth Authenticatie](#item-three)
 4. [Token Ophalen](#item-four)
 5. [Endpoints en Parameters](#item-five)
-6. [Foutafhandeling](#item-six)
-8. [Conclusie](#item-seven)
+6. [Data normalization](#item-six)
+7. [Foutafhandeling](#item-seven)
+8. [Conclusie](#item-eight)
 <a id="item-one"></a>
 ### HTTP Request Client
 
@@ -93,12 +94,34 @@ GET /profile/wow/character/{realmSlug}/{characterName}/equipment
 | `characterName`  | `string` |   :heavy_check_mark:       | The locale to reflect in localized data.  |
 | `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
-
 <a id="item-six"></a>
+# Datanormalisatie
+
+Datanormalisatie is een essentieel proces in ons applicatieontwerp dat helpt om de efficiëntie van onze datastructuur te verbeteren en redundantie te verminderen. Dit proces omvat het organiseren van gegevens in objecten of entiteiten om duplicatie te minimaliseren.
+
+## Datastructuur
+
+We hebben twee hoofdentiteiten in onze applicatie: `Player` en `Game`.
+
+### Player Entiteit
+
+De `Player` entiteit slaat informatie op over elke speler. Hier is een voorbeeld van hoe deze entiteit eruit zou kunnen zien:
+
+```csharp
+public class Player
+{
+    public Guid PlayerId { get; set; }
+    public string Name { get; set; }
+    public Guid GameId { get; set; }
+    public string Class { get; set; }
+    public int Level { get; set; }
+    public string Faction { get; set; }
+}
+<a id="item-seven"></a>
 ### Error handeling
 
 De applicatie zal error's afhandelen die kunnen optreden tijdens het proces, zoals netwerkfouten, API-fouten, enz. Deze fouten worden gelogd voor debugging en de gebruiker wordt op de hoogte gebracht van het probleem op een manier die hun begrijpen. 
-<a id="item-seven"></a>
+<a id="item-eigth"></a>
 ## Conclusie
 
 Dit technisch ontwerp document biedt een gedetailleerd overzicht van de technische aspecten van de applicatie. Het volgende stadium van dit project zou de implementatie van deze ontwerpen zijn. Bij vragen of opmerkingen kunt u contact opnemen met de auteur van dit document.
