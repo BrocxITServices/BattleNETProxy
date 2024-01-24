@@ -107,7 +107,7 @@ We hebben twee hoofdentiteiten in onze applicatie: `Player` en `Game`.
 
 De `Player` entiteit slaat informatie op over elke speler. Hier is een voorbeeld van hoe deze entiteit eruit zou kunnen zien:
 
-`csharp
+```csharp
 public class Player
 {
     public Guid PlayerId { get; set; }
@@ -117,7 +117,7 @@ public class Player
     public int Level { get; set; }
     public string Faction { get; set; }
 }
-`
+```
 <a id="item-seven"></a>
 ### Error handeling
 
