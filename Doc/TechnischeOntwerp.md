@@ -118,6 +118,26 @@ public class Player
     public string Faction { get; set; }
 }
 ```
+### Game Entiteit
+
+De `Game` entiteit slaat informatie op over elk spel. Hier is een voorbeeld van hoe deze entiteit eruit zou kunnen zien:
+
+```csharp
+public class Game
+{
+    public Guid GameId { get; set; }
+    public string Name { get; set; }
+}
+```
+## Normalisatieproces
+
+We hebben de principes van datanormalisatie toegepast op deze entiteiten om de gegevensintegriteit te waarborgen en de prestaties te optimaliseren. Specifiek hebben we:
+
+1. Ervoor gezorgd dat elke eigenschap in een entiteit een unieke waarde heeft en dat elke waarde atomair is (1NF).
+2. Gegevens gescheiden in verschillende entiteiten op basis van de relaties tussen de eigenschappen (2NF).
+3. Eigenschappen verwijderd die niet afhankelijk zijn van de primaire sleutel (3NF).
+
+Door deze principes van datanormalisatie toe te passen, kunnen we een efficiënte, flexibele en betrouwbare datastructuur creëren. Dit zal ons helpen om de prestaties van onze Blazor C# API-integratie met de Blizzard API te optimaliseren.
 <a id="item-seven"></a>
 ### Error handeling
 
