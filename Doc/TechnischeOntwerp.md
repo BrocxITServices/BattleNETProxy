@@ -12,7 +12,7 @@ Dit document beschrijft het technische ontwerp voor een Blazor C# API-koppeling 
 4. [Token Ophalen](#item-four)
 5. [Endpoints en Parameters](#item-five)
 6. [Foutafhandeling](#item-six)
-8. [Conclusie](#item-eight)
+8. [Conclusie](#item-seven)
 <a id="item-one"></a>
 ### HTTP Request Client
 
