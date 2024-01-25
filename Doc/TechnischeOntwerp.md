@@ -125,6 +125,26 @@ GET /data/wow/mount/{mountId}
 | `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
 
+### Get MythicRating
+Returns the Mythic Keystone profile index for a character.
+```http
+GET /profile/wow/character/{realmSlug}/{characterName}/mythic-keystone-profile 
+```
+| Parameter | Type     | Required | Description                |
+| :-------- | :------- | :------  | :------------------------- |
+| `region`  | `string` |    :heavy_check_mark:   | Your region  |
+| `{realmSlug}`| `string`|    :heavy_check_mark:   | The value must be used for the url |
+| `{characterName}`  | `string` |   :heavy_check_mark:       | The value must be used for the url  |
+| `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
+| `locale`  | `string` |          | The locale to reflect in localized data.  |
+
+Response
+| Opslaan | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `Rating`  | `double` |         |
+
+
+
 ### Get Item
 Returns an item by ID.
 ```http
