@@ -167,7 +167,7 @@ Response
 | Opslaan | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `Id`  | `int` ||
-| `Name`  | `stromg` ||
+| `Name`  | `string` ||
 
 ### Get Account
 Returns a profile summary for an account.
