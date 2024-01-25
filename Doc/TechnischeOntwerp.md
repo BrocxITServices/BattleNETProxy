@@ -82,8 +82,8 @@ Vergeet niet dat toegangstokens een beperkte levensduur hebben en na een bepaald
 # Endpoints en Parameters
 
 De applicatie zal verschillende endpoints van de Blizzard API gebruiken, afhankelijk van de benodigde gegevens. De benodigde parameters voor elk endpoint worden dynamisch toegevoegd door de URL Builder. De gegevens van de API-respons worden genormaliseerd en opgeslagen in een gestructureerd formaat voor verdere verwerking.
-De base url* = https://region.api.blizzard.com
-*je vervangt het woord `region` voor welke server je wilt gebruiken de ondersteundende regions zijn:
+De base url = https://region.api.blizzard.com
+je vervangt het woord `region` voor welke server je wilt gebruiken de ondersteundende regions zijn:
 `eu` voor Europa
 `us` voor Noord America
 `kr` voor Korea
