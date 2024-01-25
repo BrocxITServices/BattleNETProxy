@@ -160,19 +160,6 @@ GET /data/wow/item/{itemId}
 Deze verzoeken hebben betrekking op gebruikersspecifieke gegevens en vereisen een `access_token` en de juiste `scope`
 Deze request stuur je op met een `access_token` met de auth type `Bearer token`
 
-### Get Account
-Returns a profile summary for an account.
-```http
-GET /profile/user/wow 
-```
-`scope` wow.profile
-| Parameter | Type     | Required | Description                |
-| :-------- | :------- | :------  | :------------------------- |
-| `region`  | `string` |    :heavy_check_mark:   | Your region  |
-| `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
-| `locale`  | `string` |          | The locale to reflect in localized data.  |
-
-
 ### Get Mount Collection
 Summary of mounts collected
 ```http
