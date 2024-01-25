@@ -163,7 +163,8 @@ GET /profile/user/wow/collections/mounts
 | `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
 
-response ```json
+response 
+```json
 {
 	"_links": {
 		"self": {
@@ -186,7 +187,8 @@ response ```json
 				"id": 6
 			}
 		},
-``` uit deze response wil je de name en de id opslaan
+```
+uit deze response wil je de name en de id opslaan
 
 ### Get Account
 Returns a profile summary for an account.
