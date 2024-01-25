@@ -24,7 +24,7 @@ De URL Builder zal een basis-URL hebben voor de Blizzard API. Afhankelijk van de
 ##  Authorization Code Flow
 De applicatie maakt gebruik van OAuth 2.0 voor authenticatie. Dit betekent dat de applicatie een toegangstoken van de Blizzard API zal aanvragen met behulp van de OAuth2-verzoek. Het ontvangen token wordt vervolgens gebruikt om geautoriseerde aanvragen te doen aan de API.
 
-Om een `accesstoken` op te halen, moet u een verzoek sturen naar:
+Om een `accessToken` op te halen, moet u een GET verzoek sturen naar:
 ```http
 GET https://oauth.battle.net/authorize
 ```
@@ -61,7 +61,7 @@ Voor nu heb je de authorized credentials nodig voor de volgende Get request:
 De applicatie maakt gebruik van OAuth 2.0 voor authenticatie. Dit betekent dat de applicatie een toegangstoken van de Blizzard API zal aanvragen met behulp van de OAuth2-verzoek. Het ontvangen token wordt vervolgens gebruikt om geautoriseerde aanvragen te doen aan de API.
 
 Hier zijn de stappen die betrokken zijn bij de Client Credentials Flow:
-1. Om een `servertoken` op te halen, moet u een `POST` verzoek sturen naar:
+1. Om een `serverToken` op te halen, moet u een `POST` verzoek sturen naar:
 ```http
 POST https://oauth.battle.net/token
 ```
@@ -78,6 +78,12 @@ Dit verzoek ziet er zo uit:
 Het is belangrijk op te merken dat toegangstokens die zijn verkregen via de Client Credentials Flow geen toegang hebben tot endpoints die gebruikersspecifieke gegevens vereisen. Deze tokens zijn bedoeld voor server-tot-server interacties.
 
 Vergeet niet dat toegangstokens een beperkte levensduur hebben en na een bepaalde periode verlopen. Volgens de documentatie hebben toegangstokens een levensduur van 24 uur. Na deze periode moet een nieuw toegangstoken worden aangevraagd.
+<a id = "item-test"></a>
+# Namespacing
+Wij maken gebruik van drie soorten namespacing:
+Static: Gebruik je bij 
+Dynamic
+Profile
 <a id="item-five"></a>
 # Endpoints en Parameters
 
@@ -168,16 +174,16 @@ GET /profile/user/wow
 | `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
 
-### Locale parameter
+## Locale parameter
 
 Waneer je een request stuur zonder specific een locale value krijg je default value waardoor je de response terug krijgt in alle talen om het in een taal te krijgen moet je dus een value geven aan de locale parameter dit zijn je opties:
-# North America
+### North America
 - API
   - en_US (English)
   - es_MX (Mexican Spanish)
   - pt_BR (Portuguese)
 
-# Europe
+### Europe
 - API
   - en_GB (English)
   - es_ES (Spanish)
