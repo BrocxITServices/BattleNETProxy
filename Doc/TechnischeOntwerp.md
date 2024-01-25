@@ -40,7 +40,7 @@ met de authentication OAuth 2 moeten de volgende values in:
 | CODE CHALLENGE METHOD | SHA-256 |
 | REDIRECT URL | https://localhost:7141/|
 | SCOPE | ![afbeelding](https://github.com/BrocxITServices/BattleNETProxy/assets/138728190/a479083d-1f34-4736-8f49-17408ed180bc)|
-| STATE | Een unique value ik raad je aan om een guid te gebruiken. Hier kan je er een generatenhttps://guidgenerator.com/ |
+| STATE | Een unique value ik raad je aan om een guid te gebruiken. Hier kan je er een generaten https://guidgenerator.com/ |
 | CREDENTIALS | As Basic Auth Header (default) |
 
 Wanneer dit verzoek wordt verzonden, wordt de gebruiker omgeleid naar de Blizzard-website om in te loggen. Daarna geeft de gebruiker de applicatie toestemming om zijn informatie te gebruiken op basis van de scope die we gebruiken. Als alles goed gaat, zou u een token moeten ontvangen die 24 uur geldig is en nu wordt gebruikt voor alle GET-verzoeken waarvoor gebruikersinformatie nodig is.
