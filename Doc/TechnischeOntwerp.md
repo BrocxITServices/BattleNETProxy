@@ -62,10 +62,13 @@ De applicatie maakt gebruik van OAuth 2.0 voor authenticatie. Dit betekent dat d
 
 Hier zijn de stappen die betrokken zijn bij de Client Credentials Flow:
 
-1. **Token aanvraag**: De applicatie maakt een POST-verzoek naar de Blizzard OAuth 2.0-tokenendpoint: `https://oauth.battle.net/token`. Dit verzoek moet de volgende parameters bevatten in de aanvraagbody:
-    - `grant_type`: Dit moet worden ingesteld op `client_credentials`.
-    - `client_id`: De client ID die is verkregen bij het registreren van de applicatie bij Blizzard.
-    - `client_secret`: Het client secret dat is verkregen bij het registreren van de applicatie bij Blizzard.
+1. **Token aanvraag**: De applicatie maakt een `POST`-verzoek naar de Blizzard OAuth 2.0-tokenendpoint: `https://oauth.battle.net/token`. Dit verzoek ziet er zo uit:
+| Parameter | Value |
+| --- | --- |
+| GRANT TYPE | client_credentials |
+|AUTHROIZATION BASIC| clientid:clientsecret 
+| CLIENT ID | 'Application id' |
+| CLIENT SECRET | 'Application secret'|
 
 2. **Token respons**: Als het verzoek succesvol is, zal de Blizzard API een JSON-object retourneren dat het toegangstoken bevat. Het toegangstoken kan vervolgens worden gebruikt om geautoriseerde aanvragen te doen aan de Blizzard API voor 'Game Data API' request
 
