@@ -156,14 +156,14 @@ Summary of mounts collected
 ```http
 GET /profile/user/wow/collections/mounts  
 ```
-`scope` wow.profile
+scope wow.profile
 | Parameter | Type     | Required | Description                |
 | :-------- | :------- | :------  | :------------------------- |
 | `region`  | `string` |    :heavy_check_mark:   | Your region  |
 | `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
 
-`response`
+response
 ```json
 {
 	"_links": {
