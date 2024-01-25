@@ -204,10 +204,9 @@ scope wow.profile
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
 Response
 | Opslaan | Type     | Description                |
-| :-------- | :------- | :------------------------- |
 | `name`  | `string` |  character name       |
 | `playable class name`  | `string` | class     |
-| `level`  | `int` | level     |
+| `level`  | `int` | level |
 
 ## Locale parameter
 
