@@ -96,7 +96,7 @@ je vervangt het woord `region` voor welke server je wilt gebruiken de ondersteun
 `tw` voor Taiwan
 ## Game Data Requests
 
-Deze verzoeken hebben betrekking op game-gerelateerde gegevens. Deze request stuur je op met een `server_token ` met de auth type `Bearer token`
+Deze verzoeken hebben betrekking op game-gerelateerde gegevens. Deze request stuur je op met een `server_token` met de auth type `Bearer token`
 ### Get Creature
 Returns a creature by ID.
 ```http
