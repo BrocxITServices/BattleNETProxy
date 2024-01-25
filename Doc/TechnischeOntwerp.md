@@ -119,7 +119,7 @@ GET /profile/wow/character/{realmSlug}/{characterName}/encounters
 | `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
 ## Profile Data Request
-Deze verzoeken hebben betrekking op gebruikersspecifieke gegevens en vereisen een 'accesstoken'
+Deze verzoeken hebben betrekking op gebruikersspecifieke gegevens en vereisen een `accesstoken`
 
 ### Get Equipment
 ```http
