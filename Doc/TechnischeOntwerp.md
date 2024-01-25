@@ -63,7 +63,7 @@ De applicatie maakt gebruik van OAuth 2.0 voor authenticatie. Dit betekent dat d
 Hier zijn de stappen die betrokken zijn bij de Client Credentials Flow:
 1. Om een `servertoken` op te halen, moet u een `POST` verzoek sturen naar:
 ```http
-GET https://oauth.battle.net/token
+POST https://oauth.battle.net/token
 ```
 Dit verzoek ziet er zo uit:
 | Parameter | Value |
