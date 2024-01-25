@@ -132,7 +132,7 @@ GET /data/wow/item/{itemId}
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
 ## Profile Data Request
 Deze verzoeken hebben betrekking op gebruikersspecifieke gegevens en vereisen een `access_token` en de juiste `scope`
-Deze request stuur je op met een `access_token ` met de auth type `Bearer token`
+Deze request stuur je op met een `access_token` met de auth type `Bearer token`
 
 ### Get Account
 Returns a profile summary for an account.
