@@ -188,7 +188,7 @@ GET /profile/user/wow/collections/mounts
 			}
 		},
 ```
-uit deze response wil je de name en de id opslaan
+uit deze response wil je de `name` en de `id` opslaan
 
 ### Get Account
 Returns a profile summary for an account.
