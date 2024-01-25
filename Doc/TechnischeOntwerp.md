@@ -21,8 +21,7 @@ De applicatie zal gebruik maken van een HTTP-client, zoals HttpClient in .NET, d
 ### URL Builder
 De URL Builder zal een basis-URL hebben voor de Blizzard API. Afhankelijk van de specifieke API-aanroep die nodig is, zal de builder de juiste endpoints en parameters toevoegen aan de basis-URL. Dit zorgt voor flexibiliteit en herbruikbaarheid van code.
 <a id="item-three"></a>
-## OAuth Authenticatie
-
+##  Authorization Code Flow
 De applicatie maakt gebruik van OAuth 2.0 voor authenticatie. Dit betekent dat de applicatie een toegangstoken van de Blizzard API zal aanvragen met behulp van de OAuth2-verzoek. Het ontvangen token wordt vervolgens gebruikt om geautoriseerde aanvragen te doen aan de API.
 
 Om een `accesstoken` op te halen, moet u een verzoek sturen naar:
