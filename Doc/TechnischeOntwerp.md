@@ -22,7 +22,28 @@ De applicatie zal gebruik maken van een HTTP-client, zoals HttpClient in .NET, d
 De URL Builder zal een basis-URL hebben voor de Blizzard API. Afhankelijk van de specifieke API-aanroep die nodig is, zal de builder de juiste endpoints en parameters toevoegen aan de basis-URL. Dit zorgt voor flexibiliteit en herbruikbaarheid van code.
 <a id="item-three"></a>
 ### OAuth Authenticatie
+
 De applicatie zal OAuth 2.0 gebruiken voor authenticatie. Dit houdt in dat de applicatie een toegangstoken van de Blizzard API zal aanvragen met behulp van de client-ID en het client-geheim. Dit token wordt vervolgens gebruikt om geautoriseerde aanvragen te doen aan de API.
+
+Om een token op te halen moet je een request sturen naar:
+```http
+[GET https://oauth.battle.net/authorize
+```
+met de authentication OAuth 2 hierin moeten de volgende values in:
+| Parameter | Value |
+| --- | --- |
+| GRANT TYPE | Authorization Code |
+| AUTHORIZATION URL | https://oauth.battle.net/authorize |
+| ACCESS TOKEN URL | https://oauth.battle.net/token |
+| CLIENT ID | 'Application id' |
+| CLIENT SECRET | 'Application secret'|
+| CODE CHALLENGE METHOD | SHA-256 |
+| REDIRECT URL | https://localhost:7141/ |
+| SCOPE | ![afbeelding](https://github.com/BrocxITServices/BattleNETProxy/assets/138728190/a479083d-1f34-4736-8f49-17408ed180bc)|
+| STATE | c1fd9a0a-00ce-404a-b656-1dbed4e5f15b |
+| CREDENTIALS | As Basic Auth Header (default) |
+
+
 
 Voor informatie over Oauth graag kijken naar https://develop.battle.net/documentation/guides/using-oauth
 De Authorize URI https://oauth.battle.net/authorize
