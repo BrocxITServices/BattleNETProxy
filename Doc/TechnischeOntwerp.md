@@ -163,32 +163,11 @@ scope wow.profile
 | `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
 
-response
-```json
-{
-	"_links": {
-		"self": {
-			"href": "https://eu.api.blizzard.com/profile/user/wow/collections/mounts?namespace=profile-eu"
-		},
-		"user": {
-			"href": "https://eu.api.blizzard.com/profile/user"
-		},
-		"profile": {
-			"href": "https://eu.api.blizzard.com/profile/user/wow?namespace=profile-eu"
-		}
-	},
-	"mounts": [
-		{
-			"mount": {
-				"key": {
-					"href": "https://eu.api.blizzard.com/data/wow/mount/6?namespace=static-10.2.5_52554-eu"
-				},
-				"name": "Brown Horse",
-				"id": 6
-			}
-		},
-```
-uit deze response wil je de `name` en de `id` opslaan
+Response
+| Opslaan | Type     |
+| :-------- | :------- |
+| `Id`  | `int` |
+| `Name`  | `stromg` |
 
 ### Get Account
 Returns a profile summary for an account.
