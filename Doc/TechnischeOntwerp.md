@@ -45,7 +45,7 @@ met de authentication OAuth 2 hierin moeten de volgende values in:
 
 Wanneer dit verzoek wordt verzonden, wordt de gebruiker omgeleid naar de Blizzard-website om in te loggen. Daarna geeft de gebruiker de applicatie toestemming om zijn informatie te gebruiken op basis van de scope die we gebruiken. Als alles goed gaat, zou u een token moeten ontvangen die 24 uur geldig is en nu wordt gebruikt voor alle GET-verzoeken waarvoor gebruikersinformatie nodig is.
 
-Voor informatie over OAuth graag kijken naar https://develop.battle.net/documentation/guides/using-oauth
+Voor informatie over OAuth graag kijken naar https://develop.battle.net/documentation/guides/using-oauth 
 De Authorize URL: https://oauth.battle.net/authorize
 De Access token URL: https://oauth.battle.net/token
 Voor nu heb je de OAuth credentials nodig voor de volgende Get request:
@@ -59,15 +59,32 @@ Voor nu heb je de OAuth credentials nodig voor de volgende Get request:
 
 <a id="item-four"></a>
 ### Client Credentials Flow
+De applicatie maakt gebruik van OAuth 2.0 voor authenticatie. Dit betekent dat de applicatie een toegangstoken van de Blizzard API zal aanvragen met behulp van de OAuth2-verzoek. Het ontvangen token wordt vervolgens gebruikt om geautoriseerde aanvragen te doen aan de API.
 
+Hier zijn de stappen die betrokken zijn bij de Client Credentials Flow:
+
+1. **Token aanvraag**: De applicatie maakt een POST-verzoek naar de Blizzard OAuth 2.0-tokenendpoint: `https://oauth.battle.net/token`. Dit verzoek moet de volgende parameters bevatten in de aanvraagbody:
+    - `grant_type`: Dit moet worden ingesteld op `client_credentials`.
+    - `client_id`: De client ID die is verkregen bij het registreren van de applicatie bij Blizzard.
+    - `client_secret`: Het client secret dat is verkregen bij het registreren van de applicatie bij Blizzard.
+
+2. **Token respons**: Als het verzoek succesvol is, zal de Blizzard API een JSON-object retourneren dat het toegangstoken bevat. Het toegangstoken kan vervolgens worden gebruikt om geautoriseerde aanvragen te doen aan de Blizzard API voor 'Game Data API' request
+
+Het is belangrijk op te merken dat toegangstokens die zijn verkregen via de Client Credentials Flow geen toegang hebben tot endpoints die gebruikersspecifieke gegevens vereisen. Deze tokens zijn bedoeld voor server-tot-server interacties.
+
+Vergeet niet dat toegangstokens een beperkte levensduur hebben en na een bepaalde periode verlopen. Volgens de documentatie hebben toegangstokens een levensduur van 24 uur. Na deze periode moet een nieuw toegangstoken worden aangevraagd.
 <a id="item-five"></a>
-### Endpoints en Parameters
+# Endpoints en Parameters
+
 De applicatie zal verschillende endpoints van de Blizzard API gebruiken, afhankelijk van de benodigde gegevens. De benodigde parameters voor elk endpoint worden dynamisch toegevoegd door de URL Builder. De gegevens van de API-respons worden genormaliseerd en opgeslagen in een gestructureerd formaat voor verdere verwerking.
 
+## Game Data Requests
 
-#### Get User
+Deze verzoeken hebben betrekking op game-gerelateerde gegevens.
+### Get User
+
 ```http
-GET /profile/user/wow 
+GET /profile/user/wow
 ```
 
 | Parameter | Type     | Required | Description                |
@@ -76,7 +93,7 @@ GET /profile/user/wow
 | `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
 
-#### Get Achievements
+### Get Achievements
 
 ```http
 GET /profile/wow/character/{realmSlug}/{characterName}/achievements 
@@ -90,7 +107,7 @@ GET /profile/wow/character/{realmSlug}/{characterName}/achievements
 | `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
 
-#### Get Encounters
+### Get Encounters
 ```http
 GET /profile/wow/character/{realmSlug}/{characterName}/encounters 
 ```
@@ -101,8 +118,10 @@ GET /profile/wow/character/{realmSlug}/{characterName}/encounters
 | `characterName`  | `string` |   :heavy_check_mark:       | The locale to reflect in localized data.  |
 | `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
+## Profile Data Request
+Deze verzoeken hebben betrekking op gebruikersspecifieke gegevens en vereisen een 'accesstoken'
 
-#### Get Equipment
+### Get Equipment
 ```http
 GET /profile/wow/character/{realmSlug}/{characterName}/equipment 
 ```
