@@ -25,7 +25,7 @@ De URL Builder zal een basis-URL hebben voor de Blizzard API. Afhankelijk van de
 
 De applicatie maakt gebruik van OAuth 2.0 voor authenticatie. Dit betekent dat de applicatie een toegangstoken van de Blizzard API zal aanvragen met behulp van de OAuth2-verzoek. Het ontvangen token wordt vervolgens gebruikt om geautoriseerde aanvragen te doen aan de API.
 
-Om een accesstoken op te halen, moet u een verzoek sturen naar:
+Om een `accesstoken` op te halen, moet u een verzoek sturen naar:
 ```http
 GET https://oauth.battle.net/authorize
 ```
