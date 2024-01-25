@@ -86,22 +86,24 @@ De applicatie zal verschillende endpoints van de Blizzard API gebruiken, afhanke
 ## Game Data Requests
 
 Deze verzoeken hebben betrekking op game-gerelateerde gegevens.
-### Get User
-
+### Get Creature
+Returns a creature by ID.
 ```http
-GET /profile/user/wow
+GET /data/wow/creature/{creatureId} 
 ```
 
 | Parameter | Type     | Required | Description                |
 | :-------- | :------- | :------  | :------------------------- |
 | `region`  | `string` |    :heavy_check_mark:   | Your region  |
+|`{creatureId}`| `int`|:heavy_check_mark:| The ID of the creature|
 | `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
 
-### Get Achievements
+### Get Mount
+Returns a mount by ID.
 
 ```http
-GET /profile/wow/character/{realmSlug}/{characterName}/achievements 
+GET /data/wow/mount/{mountId} 
 ```
 
 | Parameter | Type     | Required | Description                |
@@ -112,29 +114,48 @@ GET /profile/wow/character/{realmSlug}/{characterName}/achievements
 | `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
 
-### Get Encounters
+### Get Item
+Returns an item by ID.
 ```http
-GET /profile/wow/character/{realmSlug}/{characterName}/encounters 
+GET /data/wow/item/{itemId} 
 ```
 | Parameter | Type     | Required | Description                |
 | :-------- | :------- | :------  | :------------------------- |
 | `region`  | `string` |    :heavy_check_mark:   | Your region  |
-| `realmSlug`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
-| `characterName`  | `string` |   :heavy_check_mark:       | The locale to reflect in localized data.  |
+| `{itemId}`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
 ## Profile Data Request
-Deze verzoeken hebben betrekking op gebruikersspecifieke gegevens en vereisen een `accesstoken`
+Deze verzoeken hebben betrekking op gebruikersspecifieke gegevens en vereisen een `accesstoken` en de juiste `scope`
 
-### Get Equipment
+### Get Account
+Returns a profile summary for an account.
 ```http
-GET /profile/wow/character/{realmSlug}/{characterName}/equipment 
+GET /profile/user/wow 
 ```
 | Parameter | Type     | Required | Description                |
 | :-------- | :------- | :------  | :------------------------- |
 | `region`  | `string` |    :heavy_check_mark:   | Your region  |
-| `realmSlug`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
-| `characterName`  | `string` |   :heavy_check_mark:       | The locale to reflect in localized data.  |
+| `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
+| `locale`  | `string` |          | The locale to reflect in localized data.  |
+### Get Mount Collection
+Summary of mounts collected
+```http
+GET /profile/user/wow/collections/mounts  
+```
+| Parameter | Type     | Required | Description                |
+| :-------- | :------- | :------  | :------------------------- |
+| `region`  | `string` |    :heavy_check_mark:   | Your region  |
+| `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
+| `locale`  | `string` |          | The locale to reflect in localized data.  |
+### Get Account
+Returns a profile summary for an account.
+```http
+GET /profile/user/wow 
+```
+| Parameter | Type     | Required | Description                |
+| :-------- | :------- | :------  | :------------------------- |
+| `region`  | `string` |    :heavy_check_mark:   | Your region  |
 | `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
 <a id="item-six"></a>
