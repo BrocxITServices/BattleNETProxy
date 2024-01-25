@@ -164,10 +164,10 @@ scope wow.profile
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
 
 Response
-| Opslaan | Type     |
-| :-------- | :------- |
-| `Id`  | `int` |
-| `Name`  | `stromg` |
+| Opslaan | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `Id`  | `int` ||
+| `Name`  | `stromg` ||
 
 ### Get Account
 Returns a profile summary for an account.
