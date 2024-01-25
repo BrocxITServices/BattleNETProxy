@@ -29,7 +29,7 @@ Om een accesstoken op te halen, moet u een verzoek sturen naar:
 ```http
 GET https://oauth.battle.net/authorize
 ```
-met de authentication OAuth 2 hierin moeten de volgende values in:
+met de authentication OAuth 2 moeten de volgende values in:
 | Parameter | Value |
 | --- | --- |
 | GRANT TYPE | Authorization Code |
