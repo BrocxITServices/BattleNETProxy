@@ -73,7 +73,7 @@ Dit verzoek ziet er zo uit:
 | CLIENT ID | 'Application id' |
 | CLIENT SECRET | 'Application secret'|
 
-2. **Token respons**: Als het verzoek succesvol is, zal de Blizzard API een JSON-object retourneren dat het toegangstoken bevat. Het toegangstoken kan vervolgens worden gebruikt om geautoriseerde aanvragen te doen aan de Blizzard API voor 'Game Data API' request
+2. **Token respons**: Als het verzoek succesvol is, zal de Blizzard API een JSON-object retourneren dat het toegangstoken bevat. Het toegangstoken kan vervolgens worden gebruikt om geautoriseerde aanvragen te doen aan de Blizzard API voor 'Game Data API' request deze wordt opgeslagen als een `server_token`
 
 Het is belangrijk op te merken dat toegangstokens die zijn verkregen via de Client Credentials Flow geen toegang hebben tot endpoints die gebruikersspecifieke gegevens vereisen. Deze tokens zijn bedoeld voor server-tot-server interacties.
 
@@ -82,10 +82,15 @@ Vergeet niet dat toegangstokens een beperkte levensduur hebben en na een bepaald
 # Endpoints en Parameters
 
 De applicatie zal verschillende endpoints van de Blizzard API gebruiken, afhankelijk van de benodigde gegevens. De benodigde parameters voor elk endpoint worden dynamisch toegevoegd door de URL Builder. De gegevens van de API-respons worden genormaliseerd en opgeslagen in een gestructureerd formaat voor verdere verwerking.
-
+De base url* = https://region.api.blizzard.com
+*je vervangt het woord region voor welke server je wilt gebruiken de ondersteundende regions zijn:
+`eu` voor Europa
+`us` voor Noord America
+`kr` voor Korea
+`tw` voor Taiwan
 ## Game Data Requests
 
-Deze verzoeken hebben betrekking op game-gerelateerde gegevens.
+Deze verzoeken hebben betrekking op game-gerelateerde gegevens. Deze request stuur je op met een `server_token ` met de auth type `Bearer token`
 ### Get Creature
 Returns a creature by ID.
 ```http
@@ -126,13 +131,15 @@ GET /data/wow/item/{itemId}
 | `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
 ## Profile Data Request
-Deze verzoeken hebben betrekking op gebruikersspecifieke gegevens en vereisen een `accesstoken` en de juiste `scope`
+Deze verzoeken hebben betrekking op gebruikersspecifieke gegevens en vereisen een `access_token` en de juiste `scope`
+Deze request stuur je op met een `access_token ` met de auth type `Bearer token`
 
 ### Get Account
 Returns a profile summary for an account.
 ```http
 GET /profile/user/wow 
 ```
+`scope` wow.profile
 | Parameter | Type     | Required | Description                |
 | :-------- | :------- | :------  | :------------------------- |
 | `region`  | `string` |    :heavy_check_mark:   | Your region  |
@@ -143,6 +150,7 @@ Summary of mounts collected
 ```http
 GET /profile/user/wow/collections/mounts  
 ```
+`scope` wow.profile
 | Parameter | Type     | Required | Description                |
 | :-------- | :------- | :------  | :------------------------- |
 | `region`  | `string` |    :heavy_check_mark:   | Your region  |
@@ -158,6 +166,27 @@ GET /profile/user/wow
 | `region`  | `string` |    :heavy_check_mark:   | Your region  |
 | `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
+
+### Locale parameter
+
+Waneer je een request stuur zonder specific een locale value krijg je default value waardoor je de response terug krijgt in alle talen om het in een taal te krijgen moet je dus een value geven aan de locale parameter dit zijn je opties:
+# North America
+- API
+  - en_US (English)
+  - es_MX (Mexican Spanish)
+  - pt_BR (Portuguese)
+
+# Europe
+- API
+  - en_GB (English)
+  - es_ES (Spanish)
+  - fr_FR (French)
+  - ru_RU (Russian)
+  - de_DE (German)
+  - pt_PT (Portuguese)
+  - it_IT (Italian)
+
+Wanneer je een request doet kijk dan goed naar de url als jij bijvoorbeeld gebruik maakt van `https://eu.api.blizzard.com/profile/user/wow` dan kan je geen gebruikt maken can de locale van North Amerika alleen van je eigen region
 <a id="item-six"></a>
 ## Data Normalization
 
