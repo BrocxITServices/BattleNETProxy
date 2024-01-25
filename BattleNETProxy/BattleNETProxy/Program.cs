@@ -1,6 +1,7 @@
 using BattleNETProxy.Client.Pages;
 using BattleNETProxy.Components;
 using MudBlazor.Services;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
