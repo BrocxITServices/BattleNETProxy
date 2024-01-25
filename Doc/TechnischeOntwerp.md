@@ -171,6 +171,8 @@ GET /profile/user/wow
 | `region`  | `string` |    :heavy_check_mark:   | Your region  |
 | `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
+
+
 ### Get Mount Collection
 Summary of mounts collected
 ```http
@@ -194,12 +196,18 @@ Returns a profile summary for an account.
 ```http
 GET /profile/user/wow 
 ```
-`scope` wow.profile
+scope wow.profile
 | Parameter | Type     | Required | Description                |
 | :-------- | :------- | :------  | :------------------------- |
 | `region`  | `string` |    :heavy_check_mark:   | Your region  |
 | `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
+Response
+| Opslaan | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `name`  | `string` |  character name       |
+| `playable class name`  | `string` | class     |
+| `level`  | `int` | level     |
 
 ## Locale parameter
 
