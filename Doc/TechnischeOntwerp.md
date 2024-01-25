@@ -61,8 +61,11 @@ Voor nu heb je de authorized credentials nodig voor de volgende Get request:
 De applicatie maakt gebruik van OAuth 2.0 voor authenticatie. Dit betekent dat de applicatie een toegangstoken van de Blizzard API zal aanvragen met behulp van de OAuth2-verzoek. Het ontvangen token wordt vervolgens gebruikt om geautoriseerde aanvragen te doen aan de API.
 
 Hier zijn de stappen die betrokken zijn bij de Client Credentials Flow:
-
-1. **Token aanvraag**: De applicatie maakt een `POST`-verzoek naar de Blizzard OAuth 2.0-tokenendpoint: `https://oauth.battle.net/token`. Dit verzoek ziet er zo uit:
+1. Om een `servertoken` op te halen, moet u een `POST` verzoek sturen naar:
+```http
+GET https://oauth.battle.net/token
+```
+Dit verzoek ziet er zo uit:
 | Parameter | Value |
 | --- | --- |
 | GRANT TYPE | client_credentials |
