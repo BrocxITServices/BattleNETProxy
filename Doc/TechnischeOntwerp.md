@@ -48,7 +48,7 @@ Wanneer dit verzoek wordt verzonden, wordt de gebruiker omgeleid naar de Blizzar
 Voor informatie over OAuth graag kijken naar https://develop.battle.net/documentation/guides/using-oauth 
 De Authorize URL: https://oauth.battle.net/authorize
 De Access token URL: https://oauth.battle.net/token
-Voor nu heb je de OAuth credentials nodig voor de volgende Get request:
+Voor nu heb je de authorized credentials nodig voor de volgende Get request:
 
     GET /oauth/userinfo
     GET /profile/user/wow
