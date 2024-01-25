@@ -97,33 +97,6 @@ je vervangt het woord `region` voor welke server je wilt gebruiken de ondersteun
 ## Game Data Requests
 
 Deze verzoeken hebben betrekking op game-gerelateerde gegevens. Deze request stuur je op met een `server_token` met de auth type `Bearer token`
-### Get Creature
-Returns a creature by ID.
-```http
-GET /data/wow/creature/{creatureId} 
-```
-
-| Parameter | Type     | Required | Description                |
-| :-------- | :------- | :------  | :------------------------- |
-| `region`  | `string` |    :heavy_check_mark:   | Your region  |
-|`{creatureId}`| `int`|:heavy_check_mark:| The ID of the creature|
-| `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
-| `locale`  | `string` |          | The locale to reflect in localized data.  |
-
-### Get Mount
-Returns a mount by ID.
-
-```http
-GET /data/wow/mount/{mountId} 
-```
-
-| Parameter | Type     | Required | Description                |
-| :-------- | :------- | :------  | :------------------------- |
-| `region`  | `string` |    :heavy_check_mark:   | Your region  |
-| `realmSlug`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
-| `characterName`  | `string` |   :heavy_check_mark:       | The locale to reflect in localized data.  |
-| `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
-| `locale`  | `string` |          | The locale to reflect in localized data.  |
 
 ### Get MythicRating
 Returns the Mythic Keystone profile index for a character.
@@ -143,19 +116,6 @@ Response
 | :-------- | :------- | :------------------------- |
 | `Rating`  | `double` |         |
 
-
-
-### Get Item
-Returns an item by ID.
-```http
-GET /data/wow/item/{itemId} 
-```
-| Parameter | Type     | Required | Description                |
-| :-------- | :------- | :------  | :------------------------- |
-| `region`  | `string` |    :heavy_check_mark:   | Your region  |
-| `{itemId}`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
-| `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
-| `locale`  | `string` |          | The locale to reflect in localized data.  |
 ## Profile Data Request
 Deze verzoeken hebben betrekking op gebruikersspecifieke gegevens en vereisen een `access_token` en de juiste `scope`
 Deze request stuur je op met een `access_token` met de auth type `Bearer token`
