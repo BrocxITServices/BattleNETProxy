@@ -161,6 +161,7 @@ Returns a profile summary for an account.
 ```http
 GET /profile/user/wow 
 ```
+`scope` wow.profile
 | Parameter | Type     | Required | Description                |
 | :-------- | :------- | :------  | :------------------------- |
 | `region`  | `string` |    :heavy_check_mark:   | Your region  |
