@@ -69,7 +69,7 @@ Dit verzoek ziet er zo uit:
 | Parameter | Value |
 | --- | --- |
 | GRANT TYPE | client_credentials |
-|AUTHROIZATION BASIC| clientid:clientsecret 
+| AUTHORIZATION: Basic| `clientId`:`clientSecret`
 | CLIENT ID | 'Application id' |
 | CLIENT SECRET | 'Application secret'|
 
