@@ -163,7 +163,7 @@ GET /profile/user/wow/collections/mounts
 | `namespace`| `string`|    :heavy_check_mark:   | The namespace to use to locate this document  |
 | `locale`  | `string` |          | The locale to reflect in localized data.  |
 
-response 
+`response`
 ```json
 {
 	"_links": {
