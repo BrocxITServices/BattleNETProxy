@@ -17,6 +17,8 @@ internal class Program
 
         client.BaseAddress = new Uri("https://oauth.battle.net/authorize");
         client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Authorization", "Basic");
+        // now make the value for the authorization header clientid:clientsecret
+
         var content = new FormUrlEncodedContent(new[]
         {
         new KeyValuePair<string, string>("grant_type", "client_credentials")
