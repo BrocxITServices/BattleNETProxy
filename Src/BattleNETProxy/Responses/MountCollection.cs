@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace BattleNETProxy.Models.Responses
 {
-    public record class Server_token(string access_token, string token_type);
-    public record class AccessToken(string access_token, string token_type);
+    public record class Server_token(string Access_token);
+    public record class AccessToken(string Access_token);
     public record class Mounts(string Id, string Name);
     public record class MythicRatings(double Rating);
 
