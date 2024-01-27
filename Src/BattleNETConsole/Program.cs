@@ -8,11 +8,13 @@ using System.Text;
 
 internal class Program
 {
-    const string clientId = "cd59888c589a4f3da5ba27c37a8cd55d";
-    const string clientSecret = "KsJCjem7LfNXKa7d4XhmPwpgZETvmdx5";
+    const string clientId = "";
+    const string clientSecret = "";
     private static async Task Main(string[] args)
     {
         var ServerToken = await GetGameToken();
+        Console.WriteLine(ServerToken);
+        string GameToken = ServerToken;
     }
     private static async Task<string> GetGameToken()
     {
@@ -33,9 +35,14 @@ internal class Program
         var response = await client.PostAsync("token", formData);
         if (!response.IsSuccessStatusCode) throw new HttpRequestException($"Request failed with status code: {response.StatusCode}");
 
-        var abc_responseObject = (await response.Content.ReadFromJsonAsync<dynamic>()) ?? throw new NullReferenceException();
+        var abc_responseObject = (await response.Content.ReadFromJsonAsync<ABC_Response>()) ?? throw new NullReferenceException();
         return abc_responseObject.access_token ?? throw new NullReferenceException();
     }
+    public record class ABC_Response(
+    string access_token,
+    string token_type,
+    int expires_in
+    );
 
 
 }
