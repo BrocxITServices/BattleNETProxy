@@ -1,0 +1,26 @@
+OAuth2 Protocol
+
+1. Gebruiker wilt via onze applicatie gegevens inzien.
+
+2. Gebruiker wordt door gestuurd naar battle.net inlogscherm, logt in en vervolgens teruggestuurd naar onze applicatie met de client_id en client_secret.
+
+3. Applicatie gebruikt de ontvangen `client_id` en `client_secret` om een POST verzoek te sturen en vraagt een `Access` token aan
+
+4. Applicatie vraagt een 'Access Token' aan via battle.net doormiddel van een post request en het geven van de client_id en client_secret.
+
+5. Met de 'Access Token' kan de applicatie nu API-verzoeken doen namens de gebruiker, zolang het token geldig is. 
+
+
+
+NOTES:
+Access tokens last for 24 hours. A user changing their password, removing the authorization for an application's account, or getting their account locked for any reason, results in the expiration of their current access tokens. Developers should always check the response and request a new access token if the current one fails to work.
+
+
+
+Scope: wow.profile
+
+Retrieve Access Token example:
+'curl -u {client_id}:{client_secret} -d grant_type=client_credentials https://oauth.battle.net/token'
+
+Authorization header request example:
+'curl --header "Authorization: Bearer <access_token>" <REST API URL>'
