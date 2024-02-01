@@ -10,8 +10,8 @@ using static System.Formats.Asn1.AsnWriter;
 
 internal class Program
 {
-    const string clientId = "";
-    const string clientSecret = "";
+    const string clientId = "51d7f14bd5954ad59d2b64c04d27deac";
+    const string clientSecret = "Y3pOWPh6hoW4TB923WUl2wQTqqcQB6tv";
     private static async Task Main(string[] args)
     {
         var ServerToken = await GetGameToken();
@@ -45,24 +45,26 @@ internal class Program
     static async Task<string> GetUserToken()
     {
         using var client = new HttpClient();
-        client.BaseAddress = new Uri("https://oauth.battle.net/");
-        var authValue = Convert.ToBase64String(Encoding.UTF8.GetBytes($"{clientId}:{clientSecret}"));
-        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authValue);
+        client.BaseAddress = new Uri("https://oauth.battle.net/authorize?response_type=code&client_id=51d7f14bd5954ad59d2b64c04d27deac&state=test&scope=wow.profile&redirect_uri=https://localhost:7141/");
+        //var authValue = Convert.ToBase64String(Encoding.UTF8.GetBytes($"{clientId}:{clientSecret}"));
+        //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authValue);
 
-        var formData = new FormUrlEncodedContent(new[]
-        {
-            new KeyValuePair<string, string>("grant_type", "authorization_code"),
-            new KeyValuePair<string, string>("redirect_uri", "https://localhost:7141/"),
-            new KeyValuePair<string, string>("scope", "wow.profile"),
-            new KeyValuePair<string, string>("state" , "ldiksauhadshlskadhlsadkhjsldakj"),
-        }) ;
+        //var formData = new FormUrlEncodedContent(new[]
+        //{
+        //    new KeyValuePair<string, string>("response_type", "code"),
+        //    new KeyValuePair<string, string>("client_id", $"{clientId}"),
+        //    new KeyValuePair<string, string>("state" , "test"),
+        //    new KeyValuePair<string, string>("scope", "wow.profile"),
+        //    new KeyValuePair<string, string>("redirect_uri", "https://localhost:7141/"),
+        //}) ;
 
-
-        var response = await client.PostAsync("token", formData);
+        var response = await client.GetStringAsync(client.BaseAddress);
+        Console.WriteLine(response);
+        return "test";
         //if (!response.IsSuccessStatusCode) throw new HttpRequestException($"Request failed with status code: {response.StatusCode}");
 
-        var gameToken = (await response.Content.ReadFromJsonAsync<GameToken>()) ?? throw new NullReferenceException();
-        return gameToken.access_token ?? throw new NullReferenceException();
+        //var gameToken = (await response.Content.ReadFromJsonAsync<GameToken>()) ?? throw new NullReferenceException();
+        //return gameToken.access_token ?? throw new NullReferenceException();
     }
 }
 
